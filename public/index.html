@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/fonts.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Pages&amp;Co.</title>
+    <meta name="description" content="Immerse yourself in the created world with us!">
+</head>
+
+<body>
+     <!---header--->
+    <nav id="header">
+        <div class="logo">
+            <a href="index.html"><img src="/assets/img/logo.jpg" alt="Logo" title="Logotype"></a>
+        </div>
+        <div class="navLinks">
+            <a class="homePage" href="index.html">Home</a>
+            <a href="aboutPage.html">About</a>
+            <a href="booksPage.html">Books</a>
+            <a href="newsPage.html">News</a>
+            <a href="otherPage.html">Other</a>
+        </div>
+        <div class="btnHeader">
+            <button class="btnShop"><img src="/assets/img/shop.svg" alt=""></button>
+            <button class="btnLogin"><img src="/assets/img/login.svg" alt=""></button>
+          </div>
+    </nav>
+
+    <main>
+        <div id="mainCover">
+            <h2>Find your book!</h2>
+            <section class="find">
+                <div class="search">
+                <form method="get" action="/search">
+                    <input type="text" name="find" placeholder="Title">
+                    <input type="submit" value="Search">
+                    </form>
+                </div>
+            </section>
+        </div> 
+    </main>
+
+    <section id="sliderNew">
+
+    <div class="container">
+        <div class="slider"></div>
+        <button id="prev">&lt;</button>
+        <button id="next">&gt;</button>
+    </div>
+
+</section>
+
+<script src="src/index.js"></script>
+</body>
+</html>
