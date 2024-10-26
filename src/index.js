@@ -11,24 +11,6 @@ const slides = [
         image: "assets/img/imminent.webp",
         info: "On Sale: May 7, 2024"
     },
-    {
-        name: "Imminent",
-        author: "Luis Elizondo",
-        image: "assets/img/hatched.webp",
-        info: "On Sale: August 20, 2024"
-    },
-    {
-        name: "Over Ruled",
-        author: "Anthony Horowitz",
-        image: "assets/img/ruled.webp",
-        info: "On Sale: April 16, 2024"
-    },
-    {
-        name: "Close to Death",
-        author: "Neil Gorsuch, Janie Nitze",
-        image: "assets/img/close.webp",
-        info: "On Sale: August 6, 2024"
-    },
 ];
 
 const sliderContainer = document.querySelector(".slider");
@@ -42,7 +24,7 @@ const displaySlides = () => {
     if (sliderContainer && nextBtn && prevBtn) {
         sliderContainer.style.opacity = 0;
         setTimeout(() => {
-            const { name, job, image, info } = slides[currentSlideIndex];
+            const { name, author, image, info } = slides[currentSlideIndex];
             sliderContainer.innerHTML = `
             <div class="profile">
                 <img src="${image}">
