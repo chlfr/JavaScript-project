@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <link rel="stylesheet" href="/styles/fonts.css">
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/style.css">
@@ -28,7 +32,6 @@
             <button class="btnLogin"><img src="/assets/img/login.svg" alt=""></button>
           </div>
     </nav>
-
     <main>
         <div id="mainCover">
             <h2>Find your book!</h2>
@@ -43,16 +46,60 @@
         </div> 
     </main>
 
+         <!---content--->
     <section id="sliderNew">
+        <h2>BESTSELLERS</h2>
+        <div class="sliderContainer">
+            <div class="slider"></div>
+            <button id="prev">&lt;</button>
+            <button id="next">&gt;</button>
+        </div>
+    </section>
 
-    <div class="container">
-        <div class="slider"></div>
-        <button id="prev">&lt;</button>
-        <button id="next">&gt;</button>
-    </div>
+    <section class="main swiper mySwiper">
+        <div class="wrapper swiper-wrapper">
+          <div class="slide swiper-slide">
+            <img src="images/img1.jpg" alt="" class="image" />
+            <div class="image-data">
+              <span class="text">Enjoy the finest coffee drinks.</span>
+              <h2>
+                Enjoy Our Exclusive <br />
+                Coffee and Cocktails
+              </h2>
+              <a href="#" class="button">About Us</a>
+            </div>
+          </div>
+          <div class="slide swiper-slide">
+            <img src="images/img2.jpg" alt="" class="image" />
+            <div class="image-data">
+              <span class="text">We really like what we do.</span>
+              <h2>
+                Coffee Beans with a <br />
+                Perfect Aroma
+              </h2>
+              <a href="#" class="button">About Us</a>
+            </div>
+          </div>
+          <div class="slide swiper-slide">
+            <img src="images/img3.jpg" alt="" class="image" />
+            <div class="image-data">
+              <span class="text">Making Our coffee with lover.</span>
+              <h2>
+                Alluring and Fragrant <br />
+                Coffee Aroma
+              </h2>
+              <a href="#" class="button">About Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next nav-btn"></div>
+        <div class="swiper-button-prev nav-btn"></div>
+        <div class="swiper-pagination"></div>
+      </section>
 
-</section>
-
-<script src="src/index.js"></script>
+      
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="swiper.js" defer></script>
+<script src="index.js"></script>
 </body>
 </html>

@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: space-between;
     font-weight: 600;
+    gap: 2rem;
 }
 
 #header a {
@@ -22,6 +23,7 @@
 
 .navLinks {
     display: flex;
+    align-items: center;
     gap: 16px;
 }
 
@@ -58,7 +60,9 @@
 }
 
 #mainCover {
-    background-image: url("../assets/img/coverBooks.jpg");
+    background-image: url("../assets/img/old-books.jpg") ;
+    background-repeat: no-repeat; 
+    background-size: cover;
     width: 100%;
     height: 550px;
     display: flex;
@@ -66,6 +70,7 @@
     flex-direction: column;
     justify-content: center;
 }
+
 
 #mainCover h2 {
     color: #8B0000;
@@ -105,24 +110,31 @@
 
 #sliderNew {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 20px;
 }
 
-.container{
+#sliderNew h2 {
+    font-weight: 800;
+    color: #8B0000;
+    padding-bottom: 20px;
+}
+
+.sliderContainer{
     background: #fff;
     display: flex;
     align-items: center;
     position: relative;
     width: 80vw;
     max-width: 720px;
-    height: 430px;
+    height: 330px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.container .slider{
+.sliderContainer .slider{
     display: flex;
     align-items: center;
     gap: 30px;
@@ -132,35 +144,35 @@
     opacity: 1;
 }
 
-.container .slider p{
+.sliderContainer .slider p{
     color: #888;
     text-align: justify;
     font-size: 15px;
 }
 
-.container .slider img{
-    width: 100px;
-    height: 100px;
+.sliderContainer .slider img{
+    width: 150px;
+    height: 231px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
-.container .slider h3{
+.sliderContainer .slider h3{
     color: #333;
     font-size: 15px;
     margin-bottom: 2px;
     text-align: center;
 }
 
-.container .slider h6{
+.sliderContainer .slider h6{
     color: #777;
     font-weight: 500;
     text-align: center;
     font-size: 12px;
 }
 
-.container button{
+.sliderContainer button{
     font-size: 28px;
     height: 48px;
     width: 48px;
@@ -170,29 +182,128 @@
     color: #8B0000;
     cursor: pointer;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 10px rgba(78, 17, 17, 0.814);
 }
 
-.container button#next{
+.sliderContainer button#next {
     right: -26px;
 }
 
-.container button#prev{
+.sliderContainer button#prev {
     left: -26px;
 }
 
+.main {
+    height: 100vh;
+    width: 100%;
+  }
+  .wrapper,
+  .slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .slide {
+    overflow: hidden;
+  }
+  .slide::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+  }
+  .slide .image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .slide .image-data {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+  }
+  .image-data span.text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+  }
+  .image-data h2 {
+    font-size: 45px;
+    font-weight: 600;
+    color: #fff;
+  }
+  a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #333;
+    background: #fff;
+    text-decoration: none;
+    margin-top: 25px;
+    transition: all 0.3s ease;
+  }
+  a.button:hover {
+    color: #fff;
+    background-color: #c87e4f;
+  }
+  /* swiper button css */
+  .nav-btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .nav-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .swiper-button-next {
+    right: 50px;
+  }
+  .swiper-button-prev {
+    left: 50px;
+  }
+  .nav-btn::before,
+  .nav-btn::after {
+    font-size: 25px;
+    color: #fff;
+  }
+  .swiper-pagination-bullet {
+    opacity: 1;
+    height: 12px;
+    width: 12px;
+    background-color: #fff;
+    visibility: hidden;
+  }
+  .swiper-pagination-bullet-active {
+    border: 2px solid #fff;
+    background-color: #c87e4f;
+  }
+  @media screen and (max-width: 768px) {
+    .nav-btn {
+      visibility: hidden;
+    }
+    .swiper-pagination-bullet {
+      visibility: visible;
+    }
+  }
+
 @media screen and (max-width: 720px) {
     
-    .container{
+    .sliderContainer{
         height: 360px;
     }
 
-    .container .slider{
+    .sliderContainer .slider{
         flex-direction: column;
     }
 
-    .container .slider p{
+    .sliderContainer .slider p{
         font-size: 13px;
     }
-
 }
