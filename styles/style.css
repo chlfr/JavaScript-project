@@ -1,63 +1,4 @@
-/* header */
-
-#header {
-    padding: 5px 148px;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: 600;
-    gap: 2rem;
-}
-
-#header a {
-    text-decoration: none;
-    color: #8B0000;
-    font-size: 24px;
-}
-
-.logo img {
-    width: 150px;
-    height: 150px;
-}
-
-.navLinks {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.navLinks a {
-    transition: transform 0.5s;
-}
-
-.navLinks a:hover {
-    transform: scale(1.2);
-}
-
-.btnHeader {
-    width: auto;
-    height: auto;
-}
-
-.btnLogin, .btnShop {
-    border: none;
-    background-color: white;
-    transition: transform 0.2s;
-}
-
-.btnLogin:hover, .btnShop:hover {
-    transform: scale(1.2);
-}
-
-.btnShop img, .btnLogin img{
-    width: 30px;
-    height: 30px;
-}
-
-.btnShop img {
-    margin-right: 10px;
-}
+/* home */
 
 #mainCover {
     background-image: url("../assets/img/old-books.jpg") ;
@@ -70,7 +11,6 @@
     flex-direction: column;
     justify-content: center;
 }
-
 
 #mainCover h2 {
     color: #8B0000;
@@ -193,98 +133,248 @@
     left: -26px;
 }
 
-.main {
+.swiper {
     height: 100vh;
     width: 100%;
-  }
-  .wrapper,
-  .slide {
+}
+
+.wrapper, .slide {
     position: relative;
     width: 100%;
     height: 100%;
-  }
-  .slide {
+}
+  
+.slide {
     overflow: hidden;
-  }
-  .slide::before {
+}
+
+.slide::before {
     content: "";
     position: absolute;
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 10;
-  }
-  .slide .image {
+}
+
+.slide .image {
     height: 100%;
     width: 100%;
     object-fit: cover;
-  }
-  .slide .image-data {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+}
+
+.slide .image-data {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+}
+.image-data span.textSwiper {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+.image-data h2 {
+  font-size: 45px;
+  font-weight: 600;
+  color: #fff;
+}
+a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #8B0000;
+  background: #fff;
+  text-decoration: none;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+}
+a.button:hover {
+  color: #fff;
+  background-color: #8B0000;
+}
+.nav-btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+.swiper-button-next {
+  right: 50px;
+}
+.swiper-button-prev {
+  left: 50px;
+}
+.nav-btn::before,
+.nav-btn::after {
+  font-size: 25px;
+  color: #fff;
+}
+.swiper-pagination-bullet {
+  opacity: 1;
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  visibility: hidden;
+}
+.swiper-pagination-bullet-active {
+  border: 2px solid #fff;
+  background-color: #c87e4f;
+}
+
+#partnersBlock {
+    width: 100%;
+    height: auto;
+    padding-top: 4em;
+}
+
+.partnersArticle {
+    margin-bottom: 4em;
+}
+
+.partnersTitle {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    text-shadow: 2px 2px 3px gray;
+}
+.partnersSpan {
+    color: #8B0000;
+}
+
+.partnersText {
+    font-size: 1.2em;
+    margin-bottom: 3em;
     text-align: center;
     width: 100%;
-    z-index: 100;
-  }
-  .image-data span.text {
-    font-size: 14px;
-    font-weight: 400;
-    color: #fff;
-  }
-  .image-data h2 {
-    font-size: 45px;
-    font-weight: 600;
-    color: #fff;
-  }
-  a.button {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 25px;
-    color: #333;
-    background: #fff;
-    text-decoration: none;
-    margin-top: 25px;
-    transition: all 0.3s ease;
-  }
-  a.button:hover {
-    color: #fff;
-    background-color: #c87e4f;
-  }
-  /* swiper button css */
-  .nav-btn {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-  }
-  .nav-btn:hover {
-    background: rgba(255, 255, 255, 0.4);
-  }
-  .swiper-button-next {
-    right: 50px;
-  }
-  .swiper-button-prev {
-    left: 50px;
-  }
-  .nav-btn::before,
-  .nav-btn::after {
-    font-size: 25px;
-    color: #fff;
-  }
-  .swiper-pagination-bullet {
-    opacity: 1;
-    height: 12px;
-    width: 12px;
-    background-color: #fff;
-    visibility: hidden;
-  }
-  .swiper-pagination-bullet-active {
-    border: 2px solid #fff;
-    background-color: #c87e4f;
-  }
+}
+
+.partnersIcon {
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+.partnersIcon img { 
+    width: 15em;
+}
+
+/* about */
+
+.aboutContainer {
+    background-image: url(../assets/img/paper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+.aboutContainer h1, .aboutContainer h3 {
+    display: flex;
+    justify-content: right;
+    padding-top: 50px;
+    padding-right: 10%;
+}
+
+.aboutContainer h1 {
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 40px;
+    text-shadow: 3px 3px 4px #8B0000;
+}
+
+.aboutContainer h3 {
+    color: #ffffff;
+    text-shadow: 3px 3px 4px #8B0000;
+}
+
+.historyBlock h1 {
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.historyBlock p {
+    padding: 30px;
+    text-align: justify;
+    font-size: 24px;
+}
+.locationContainer {
+  height: auto;
+  width: 100%;
+  padding: 6em 7em 6em 7em;
+}
+
+.contactsArticle {
+  text-align: center;
+}
+
+.contactsName {
+  font-size: 2em;
+  font-weight: bold;
+  color: #8B0000;
+  margin-bottom: 1em;
+}
+
+.blockAddress {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5em;
+  justify-content: center;
+}
+
+.address {
+  padding: 3em;
+  margin-right: 2em;
+}
+
+.address svg {
+  transition: transform 0.5s; 
+}
+
+.address svg:hover {
+  transform: scale(1.2); 
+}
+
+.address h2, .address h3 {
+  margin-bottom: 0.7em;
+  font-size: 1.4em;
+  font-weight: bolder;
+}
+
+.address h3 {
+  padding-bottom: 1em;
+}
+
+.top_add {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.addressList li {
+  margin-bottom: 1em;
+  font-size: 1em;
+}
+
+.map {
+  text-align: center;
+  width: 100%;
+}
+
+.map iframe {
+  width: 80%;
+}
+
+
   @media screen and (max-width: 768px) {
+
     .nav-btn {
       visibility: hidden;
     }
@@ -295,9 +385,7 @@
 
 @media screen and (max-width: 720px) {
     
-    .sliderContainer{
-        height: 360px;
-    }
+    .sliderContainer{height: auto; padding: 20px 0 20px 0;}
 
     .sliderContainer .slider{
         flex-direction: column;

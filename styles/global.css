@@ -4,3 +4,244 @@
     box-sizing: border-box;
 }
 
+#header {
+    padding: 5px 148px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    gap: 2rem;
+}
+
+#header a {
+    text-decoration: none;
+    color: #8B0000;
+    font-size: 24px;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navLinks a {
+    transition: transform 0.5s;
+}
+
+.navLinks a:hover {
+    transform: scale(1.2);
+}
+
+.btnHeader {
+    width: auto;
+    height: auto;
+}
+
+.btnLogin, .btnShop {
+    border: none;
+    background-color: white;
+    transition: transform 0.2s;
+}
+
+.btnLogin:hover, .btnShop:hover {
+    transform: scale(1.2);
+}
+
+.btnShop img, .btnLogin img{
+    width: 30px;
+    height: 30px;
+}
+
+.btnShop img {
+    margin-right: 10px;
+}
+
+input[type="checkbox"] {
+    visibility: hidden;
+}
+
+
+#footerBlock {
+    max-width: 100%;
+    height: 19em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/img/paper_fon.jpg);
+  }
+  
+  #footer_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+  
+  #footer_logo img {
+    width: 12em;
+    margin-top: 15%;
+  }
+  
+  #footer_logo p {
+    font-size: 0.8em;
+    margin-top: 10%;
+    color: rgb(0, 0, 0);
+  }
+  
+  .footer_block_menu {
+    padding: 0 6% 0 6%;
+    margin-left: 10%;
+  }
+  
+  .footer_block_menu h2 {
+    color: #8B0000;
+    font-size: 1.3em;
+    font-weight: bolder;
+    padding-bottom: 1em;
+  }
+  
+  .footer_menu_list {
+    margin: 0;
+    display: block;
+    color: #000000;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer_menu_list li {
+    padding-bottom: 0.5em;
+    font-weight: lighter;
+    transition: transform 0.5s; 
+  }
+  
+  .footer_menu_list li:hover {
+    transform: scale(1.2);
+  }
+  
+  .footer_menu_list a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .footer_menu_list a:hover {
+    color: #8B0000;
+  }
+  
+  .footer_menu_list svg {
+    width: 20px;
+    height: 20px;
+  }
+
+@media all and (min-width: 768px) and (max-width: 1180px) {
+
+    #footerBlock {height: auto;}
+    #footer_logo {margin-bottom: 6%;}
+    #footer_logo p {font-size: 0.7em;}
+    .footer_block_menu h2 {font-size: 1em;}
+  }
+
+  @media all and (max-width: 980px)  {
+
+  #header {
+      padding-left: 5%;
+      padding-right: 5%;
+  }
+
+  .burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+  .burger {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 30px;
+    height: 26px;
+  }
+  .burger::before,
+  .burger::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: #000;
+  }
+  .burger::before {
+    top: 0;
+    box-shadow: 0 11px 0 #000;
+    transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+  }
+  .burger::after {
+    bottom: 0;
+    transition: bottom .3s .15s, transform .3s;
+  }
+  .burger-checkbox:checked + .burger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0,0,0,0);
+    transition: box-shadow .15s, top .3s, transform .3s .15s;
+  }
+  .burger-checkbox:checked + .burger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom .3s, transform .3s .10s;
+  }
+  .navLinks {
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    padding: 42px 0;
+    margin: 0;
+    background: #fff;
+    list-style-type: none;
+    transform: translateX(-100%);
+    transition: .1s;
+    width: 50%;
+    height: 100%;
+  }
+  .page {
+    display: block;
+    padding: 8px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .page:hover {
+    background: rgba(255,255,255,.2)
+  }
+  .burger-checkbox:checked ~ .navLinks {
+    transform: translateX(0);
+  }
+}
+
+  @media all and (min-width: 280px) and (max-width: 768px) {
+    
+    #footerBlock {height: auto; flex-direction: column; padding-top: 20px;}
+    #footer_logo {order: 2;}
+    #footer_logo img {width: 100px; align-self: center;}
+    #footer_logo p {font-size: 10px; padding-bottom: 2em;}
+    .footer_block_menu {display: block; margin: 0 auto; padding-top: 10px;}
+    .footer_menu_list svg {visibility: hidden; position: absolute;}
+    .footer_block_menu h2 {font-size: 1em; text-align: center;}
+    .footer_menu_list {display: flex; flex-direction: row;}
+    .footer_menu_list li {padding-left: 1em; font-size: 0.5em;}
+}
