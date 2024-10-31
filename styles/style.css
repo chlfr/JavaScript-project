@@ -384,17 +384,236 @@ a.button:hover {
 
 /* news */
 
+#news-container {
+    padding: 5px;
+}
+
+#news-container h1 {
+    text-transform: uppercase;
+    color: #8B0000;
+    text-shadow: 3px 3px 4px #4646464f;
+    text-align: center;
+    margin-bottom: 20px;
+    background-image: url(../assets/img/paper_fon.jpg);
+    padding: 10px;
+}
+.news-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-block img {
+  width: 40%;
+}
+
+@keyframes animation-span
+{
+    from { color: black; }
+    to {color: #8B0000; }
+}
+
+.animation-span {
+    animation: animation-span 2s infinite;
+}
+
+.news-text-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    border-top: 1px solid #8B0000;
+    margin: 0 30px 0 30px;
+}
+
+.text-column {
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.text-column h2 {
+  color: #8B0000;
+}
+
+.text-column ol {
+  text-align: justify;
+}
+
+.text-column li {
+  margin-bottom: 10px;
+}
+
+.text-column h3 {
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.text-column p {
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.download-form {
+  margin: 50px;
+  padding: 10px;
+  text-transform: uppercase;
+  background-color: #8B0000;
+  border: none;
+  border-radius: 5px;
+  transition: transform 0.5s;
+}
+
+.download-form:hover {
+  transform: scale(1.2);
+}
+
+.download-form a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#news-api-container {
+  max-width: 80%;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #8B0000;
+  transition: all 0.3s ease;
+}
+
+#news-api-container:hover{
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#news-api-container h1{
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.selection-container, .search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.choose-label {
+  font-size: 16px;
+  margin-right: 10px;
+  color: #fff;
+}
+
+select,
+input[type="text"]{
+  padding: 8px;
+  flex: 1;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  outline: none;
+}
+
+#fetchCategory, .search-btn {
+  background-color: #000;
+  color: #fff;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 15px;
+  transition: all 0.3s ease;
+}
+
+.newsItem{
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 20px;
+}
+
+.newsItem:last-child{
+  border-bottom: none;
+}
+
+.newsImage{
+  flex: 1;
+  max-width: 300px;
+}
+
+.newsImage img{
+  max-width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.newsContent{
+  flex: 2;
+  margin-left: 20px;
+}
+
+.newsContent .info{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.newsContent .info h5{
+  margin: 0;
+  font-weight: 400;
+}
+
+.newsContent h2{
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 0;
+  max-height: 44px;
+  overflow: hidden;
+}
+
+.newsContent p{
+  color: #ffffff;
+  margin: 10px 0 20px;
+  font-size: 14px;
+  max-height: 33px;
+  overflow: hidden;
+}
+
+.newsContent a{
+  background-color: #000;
+  color: #fff;
+  padding: 8px 14px;
+  font-size: 13px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
 
 
-  @media screen and (max-width: 768px) {
+@media all and (max-width: 1180px) {
+  .news-text-container {display: block; margin: 0; padding: 30px;}
+}
 
-    .nav-btn {
-      visibility: hidden;
-    }
-    .swiper-pagination-bullet {
-      visibility: visible;
-    }
+
+@media screen and (max-width: 768px) {
+
+  .nav-btn {
+    visibility: hidden;
   }
+  .swiper-pagination-bullet {
+    visibility: visible;
+  }
+}
 
 @media screen and (max-width: 720px) {
     
@@ -407,4 +626,8 @@ a.button:hover {
     .slider-container .slider p{
         font-size: 13px;
     }
+}
+
+@media all and (min-width: 280px) and (max-width: 768px) {
+
 }

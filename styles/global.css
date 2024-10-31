@@ -52,6 +52,7 @@
 
 .btn-login:hover, .btn-shop:hover {
     transform: scale(1.2);
+    background-color: #fff;
 }
 
 .btn-shop img, .btn-login img{
@@ -151,8 +152,8 @@ input[type="checkbox"] {
   @media all and (max-width: 980px)  {
 
   #header {
-      padding-left: 5%;
-      padding-right: 5%;
+      padding-left: 2%;
+      padding-right: 2%;
   }
 
   .burger-checkbox {
@@ -233,8 +234,10 @@ input[type="checkbox"] {
   }
 }
 
-  @media all and (min-width: 280px) and (max-width: 768px) {
+  @media all and (min-width: 180px) and (max-width: 768px) {
     
+    #nav-header {padding: 0; justify-content: center;}
+
     #footer-block {height: auto; flex-direction: column; padding-top: 20px;}
     #footer-logo {order: 2;}
     #footer-logo img {width: 100px; align-self: center;}

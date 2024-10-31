@@ -38,7 +38,82 @@
     <!---content--->
 
     <section id="news-container">
-        <div class=""></div>
+        <h1>New! Competition!</h1>
+        <div class="news-block">
+            <img src="/assets/img/writer.jpg" alt="Image" title="Typewriter">
+            <h3>Take part in the competition from our store <span class="animation-span">Pages&amp;Co.</span></h3>
+        </div>
+        <div class="news-text-container">
+            <div class="text-column">
+                <h2>Rules</h2>
+                <ol>
+
+                    <li> Eligibility:<br>
+                    The contest is open to children aged 5 to 18 years.<br>
+                    Participants may submit entries individually or as a team (maximum of 2 children per team).</li>
+                    
+                    <li>Contest Theme:<br>
+                    Create an original children’s story, accompanied by illustrations. The theme can be anything that sparks imagination and creativity.</li>
+                    
+                    <li>Story Requirements:<br>
+                    The story must be between 300 and 1000 words.
+                    It should be suitable for children and convey a positive message or lesson.</li>
+                    
+                    <li>Illustration Requirements:<br>
+                    Participants must create at least 3 illustrations that relate to the story.<br>
+                    Illustrations can be in any medium (drawings, paintings, digital art, etc.) but should be scanned or photographed for submission.</li> 
+                    
+                    <li>Submission Guidelines:<br>
+                    Both the story and illustrations should be submitted via email to [email@example.com].<br>
+                    The subject line of the email must read: Pages&amp;Co. Contest Submission - [Participant's Name(s)]".<br>
+                    All entries must be submitted by [Insert Deadline Date].</li>
+                    
+                    <li>Judging Criteria:<br>
+                    Stories will be judged based on creativity, originality, writing quality, and the ability to engage young readers.
+                    Illustrations will be judged on creativity, relevance to the story, and visual appeal.<br>
+                    A panel of judges from HarperCollins and Pages&amp;Co. will make the final decision.</li>
+                    
+                    <li>Prize:<br>
+                    The winner(s) will receive a £5000 gift certificate to use at Pages&amp;Co. store.<br>
+                    The winning story may also be featured on the Pages&amp;Co. website and social media platforms (with parental permission).</li>
+                    
+                    <li>Notification:<br>
+                    Winners will be announced on [Insert Announcement Date] via email and on our social media channels.<br>
+                    The winning participant(s) must respond to the notification within 7 days to claim their prize.</li>
+                    
+                    <li>Rights:<br>
+                    By submitting an entry, participants grant Pages&amp;Co. and HarperCollins the right to share the story and illustrations for promotional purposes.</li>
+                    
+                    <li>Contact Information:<br>
+                    For any inquiries regarding the contest, please contact us at [pages_and_co@gmail.com].</li>
+                    
+                    <h3>We look forward to your delightful stories and amazing illustrations! Happy writing!</h3>
+                    
+                    <p>Sponsored by HarperCollins.</p>
+                </ol>
+            </div>
+            <div class="text-column">
+                <button class="download-form"><a href="https://1drv.ms/w/c/0d4a873e1f85eeb9/EfYxzThSqVRGk3IKpCEugicBp4I8Tzt2dooQ5PV0XHYH0Q?e=95Sghc" target="_blank">Download Form</a></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="news-api-container">
+            <h1>News in the world</h1>
+            <div class="selection-container">
+                <label for="category" class="choose-label">Choose Category:</label>
+                <select id="category">
+                    <option value="entertainment">Entertainment</option>
+                    <option value="general">General</option>
+                </select>
+                <button id="fetchCategory">Fetch News</button>
+            </div>
+    
+            <div class="search-container">
+                <input type="text" id="searchKeyword" placeholder="Search for news...">
+                <button onclick="fetchNews(true)" class="search-btn">Search</button>
+            </div>
+            <div id="newsContainer"></div>
     </section>
 
 
@@ -74,6 +149,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="swiper.js"></script>
+<script src="apiNews.js"></script>
 <script src="index.js"></script>
 </body>
 
