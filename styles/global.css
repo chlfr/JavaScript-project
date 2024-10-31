@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-#header {
+#nav-header {
     padding: 5px 148px;
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -14,52 +14,52 @@
     gap: 2rem;
 }
 
-#header a {
+#nav-header a {
     text-decoration: none;
     color: #8B0000;
     font-size: 24px;
 }
 
-.logo img {
+.logo-div img {
     width: 150px;
     height: 150px;
 }
 
-.navLinks {
+.nav-links {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.navLinks a {
+.nav-links a {
     transition: transform 0.5s;
 }
 
-.navLinks a:hover {
+.nav-links a:hover {
     transform: scale(1.2);
 }
 
-.btnHeader {
+.btn-header {
     width: auto;
     height: auto;
 }
 
-.btnLogin, .btnShop {
+.btn-login, .btn-shop {
     border: none;
     background-color: white;
     transition: transform 0.2s;
 }
 
-.btnLogin:hover, .btnShop:hover {
+.btn-login:hover, .btn-shop:hover {
     transform: scale(1.2);
 }
 
-.btnShop img, .btnLogin img{
+.btn-shop img, .btn-login img{
     width: 30px;
     height: 30px;
 }
 
-.btnShop img {
+.btn-shop img {
     margin-right: 10px;
 }
 
@@ -68,7 +68,7 @@ input[type="checkbox"] {
 }
 
 
-#footerBlock {
+#footer-block {
     max-width: 100%;
     height: 19em;
     display: flex;
@@ -78,37 +78,37 @@ input[type="checkbox"] {
     background-image: url(../assets/img/paper_fon.jpg);
   }
   
-  #footer_logo {
+  #footer-logo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: auto;
   }
   
-  #footer_logo img {
+  #footer-logo img {
     width: 12em;
     margin-top: 15%;
   }
   
-  #footer_logo p {
+  #footer-logo p {
     font-size: 0.8em;
     margin-top: 10%;
     color: rgb(0, 0, 0);
   }
   
-  .footer_block_menu {
+  .footer-menu {
     padding: 0 6% 0 6%;
     margin-left: 10%;
   }
   
-  .footer_block_menu h2 {
+  .footer-menu h2 {
     color: #8B0000;
     font-size: 1.3em;
     font-weight: bolder;
     padding-bottom: 1em;
   }
   
-  .footer_menu_list {
+  .footer-menu-list {
     margin: 0;
     display: block;
     color: #000000;
@@ -116,36 +116,36 @@ input[type="checkbox"] {
     padding: 0;
   }
   
-  .footer_menu_list li {
+  .footer-menu-list li {
     padding-bottom: 0.5em;
     font-weight: lighter;
     transition: transform 0.5s; 
   }
   
-  .footer_menu_list li:hover {
+  .footer-menu-list li:hover {
     transform: scale(1.2);
   }
   
-  .footer_menu_list a {
+  .footer-menu-list a {
     text-decoration: none;
     color: #000000;
   }
   
-  .footer_menu_list a:hover {
+  .footer-menu-list a:hover {
     color: #8B0000;
   }
   
-  .footer_menu_list svg {
+  .footer-menu-list svg {
     width: 20px;
     height: 20px;
   }
 
 @media all and (min-width: 768px) and (max-width: 1180px) {
 
-    #footerBlock {height: auto;}
-    #footer_logo {margin-bottom: 6%;}
-    #footer_logo p {font-size: 0.7em;}
-    .footer_block_menu h2 {font-size: 1em;}
+    #footer-block {height: auto;}
+    #footer-logo {margin-bottom: 6%;}
+    #footer-logo p {font-size: 0.7em;}
+    .footer-menu h2 {font-size: 1em;}
   }
 
   @media all and (max-width: 980px)  {
@@ -201,7 +201,7 @@ input[type="checkbox"] {
     transform: rotate(-45deg);
     transition: bottom .3s, transform .3s .10s;
   }
-  .navLinks {
+  .nav-links {
     top: 0;
     left: 0;
     position: absolute;
@@ -217,7 +217,7 @@ input[type="checkbox"] {
     width: 50%;
     height: 100%;
   }
-  .page {
+  .page-link {
     display: block;
     padding: 8px;
     color: white;
@@ -225,23 +225,23 @@ input[type="checkbox"] {
     text-align: center;
     text-decoration: none;
   }
-  .page:hover {
+  .page-link:hover {
     background: rgba(255,255,255,.2)
   }
-  .burger-checkbox:checked ~ .navLinks {
+  .burger-checkbox:checked ~ .nav-links {
     transform: translateX(0);
   }
 }
 
   @media all and (min-width: 280px) and (max-width: 768px) {
     
-    #footerBlock {height: auto; flex-direction: column; padding-top: 20px;}
-    #footer_logo {order: 2;}
-    #footer_logo img {width: 100px; align-self: center;}
-    #footer_logo p {font-size: 10px; padding-bottom: 2em;}
-    .footer_block_menu {display: block; margin: 0 auto; padding-top: 10px;}
-    .footer_menu_list svg {visibility: hidden; position: absolute;}
-    .footer_block_menu h2 {font-size: 1em; text-align: center;}
-    .footer_menu_list {display: flex; flex-direction: row;}
-    .footer_menu_list li {padding-left: 1em; font-size: 0.5em;}
+    #footer-block {height: auto; flex-direction: column; padding-top: 20px;}
+    #footer-logo {order: 2;}
+    #footer-logo img {width: 100px; align-self: center;}
+    #footer-logo p {font-size: 10px; padding-bottom: 2em;}
+    .footer-menu {display: block; margin: 0 auto; padding-top: 10px;}
+    .footer-menu-list svg {visibility: hidden; position: absolute;}
+    .footer-menu h2 {font-size: 1em; text-align: center;}
+    .footer-menu-list {display: flex; flex-direction: row;}
+    .footer-menu-list li {padding-left: 1em; font-size: 0.5em;}
 }
