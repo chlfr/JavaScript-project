@@ -599,6 +599,17 @@ input[type="text"]{
   transition: all 0.3s ease;
 }
 
+/* other page */
+
+#app-container {
+  max-width: 80%;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #8B0000;
+  color: #fff;
+}
+
 
 @media all and (max-width: 1180px) {
   .news-text-container {display: block; margin: 0; padding: 30px;}
