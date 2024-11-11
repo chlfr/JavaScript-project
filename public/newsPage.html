@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
     <link rel="stylesheet" href="/styles/fonts.css">
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/style.css">
@@ -30,8 +26,59 @@
             <a class="page-link" href="otherPage.html">Other</a>
         </div>
         <div class="btn-header">
-            <button class="btn-shop"><img src="/assets/img/shop.svg" alt=""></button>
-            <button class="btn-login"><img src="/assets/img/login.svg" alt=""></button>
+            <button id="open-cart-btn"><img src="/assets/img/shop.svg" alt="Cart">0</button>
+            <div id="cart-modal-container">
+                <div class="modal-content-block">
+                    <span id="close-modal-span">&times;</span>
+                    <h2>Order Registration</h2>
+                    <div id="cart-items-div"></div>
+                    <p id="total-price">Total: 0</p>
+                    <button id="buy-btn">Buy</button>
+                </div>
+            </div>
+            <button id="open-login-btn"><img src="/assets/img/login.svg" alt="Reg"></button>
+            <div id="register-modal-container">
+                <div class="register-modal">
+                <form id="register-form">
+                    <span id="close-form-span">&times;</span>
+                    <h2>Sign Up or Log In</h2>
+                    <div class="form-control">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" autocomplete="off">
+                        <i class="icon"></i>
+                    </div>
+        
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" autocomplete="off">
+                        <i class="icon"></i>
+                    </div>
+        
+                    <div class="form-control">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="Enter your phone" autocomplete="off">
+                        <i class="icon"></i>
+                    </div>
+        
+                    <div class="form-control">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" autocomplete="off">
+                        <i class="icon"></i>
+                    </div>
+        
+                    <button class="signup-btn" type="submit">Sign Up</button>
+                    <button class="login-btn" type="submit">Log In</button>
+        
+                </form>
+                </div>
+            </div>
+        
+            <div id="successModal" class="modal-reg">
+                <div class="modal-content-reg">
+                    <span class="close-button-reg">&times;</span>
+                    <h2>Success!</h2>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -99,7 +146,7 @@
     </section>
 
     <section id="news-api-container">
-            <h1>News in the world</h1>
+            <h1>News</h1>
             <div class="selection-container">
                 <label for="category" class="choose-label">Choose Category:</label>
                 <select id="category">
@@ -139,7 +186,7 @@
                     <li><a href="#" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
                     <path d="M 6.9199219 6 L 21.136719 26.726562 L 6.2285156 44 L 9.40625 44 L 22.544922 28.777344 L 32.986328 44 L 43 44 L 28.123047 22.3125 L 42.203125 6 L 39.027344 6 L 26.716797 20.261719 L 16.933594 6 L 6.9199219 6 z"></path>
                     </svg> Twitter</a></li>
-                    <li><a href="#" title="Telegram"><svg width="64px" height="64px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#000000" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M26.67,38.57l-.82,11.54A2.88,2.88,0,0,0,28.14,49l5.5-5.26,11.42,8.35c2.08,1.17,3.55.56,4.12-1.92l7.49-35.12h0c.66-3.09-1.08-4.33-3.16-3.55l-44,16.85C6.47,29.55,6.54,31.23,9,32l11.26,3.5L45.59,20.71c1.23-.83,2.36-.37,1.44.44Z" stroke-linecap="round"></path></g></svg> Telegram</a></li>
+                    <li><a href="#" title="Telegram"><svg width="64px" height="64px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#000000" fill="none"><g id="SVGRepo_bgCarrier2" stroke-width="0"></g><g id="SVGRepo_tracerCarrier2" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier3"><path d="M26.67,38.57l-.82,11.54A2.88,2.88,0,0,0,28.14,49l5.5-5.26,11.42,8.35c2.08,1.17,3.55.56,4.12-1.92l7.49-35.12h0c.66-3.09-1.08-4.33-3.16-3.55l-44,16.85C6.47,29.55,6.54,31.23,9,32l11.26,3.5L45.59,20.71c1.23-.83,2.36-.37,1.44.44Z" stroke-linecap="round"></path></g></svg> Telegram</a></li>
                     <li><a href="#" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
                     <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M37,19h-2c-2.14,0-3,0.5-3,2 v3h5l-1,5h-4v15h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z"></path>
                 </svg> Facebook</a></li>
@@ -147,10 +194,9 @@
             </div>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="swiper.js"></script>
-<script src="apiNews.js"></script>
-<script src="index.js"></script>
+<script src="/dist/main.js"></script>
+<script src="/src/apiNews.js"></script>
+
 </body>
 
 </html>

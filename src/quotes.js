@@ -45,9 +45,9 @@
         quoteElement.textContent = getRandomQuote();
     }
 
-    document.getElementById('newQuoteBtn').addEventListener('click', displayQuote);
+    document.getElementById('quote-btn').addEventListener('click', displayQuote);
 
-    // Показываем цитату при загрузке страницы
+    // показываем цитату при загрузке страницы
     displayQuote();
 
     

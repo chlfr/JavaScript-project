@@ -44,25 +44,237 @@
     height: auto;
 }
 
-.btn-login, .btn-shop {
-    border: none;
-    background-color: white;
-    transition: transform 0.2s;
+#cart-modal-container {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
 }
 
-.btn-login:hover, .btn-shop:hover {
-    transform: scale(1.2);
-    background-color: #fff;
+.modal-content-block {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
 }
 
-.btn-shop img, .btn-login img{
-    width: 30px;
-    height: 30px;
+#close-modal-span {
+  cursor: pointer;
+  float: right;
 }
 
-.btn-shop img {
-    margin-right: 10px;
+#open-cart-btn {
+  border: none;
+  background-color: #fff;
 }
+
+#open-cart-btn img {
+  vertical-align: middle;
+  width: 30px;
+}
+
+#cart-items-div {
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap; 
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-catalog {
+  border: none;
+  padding: 10px;
+  text-align: center;
+  width: 120px;
+  height: 270px;
+}
+
+.cart-catalog p, h3 {
+  color: #8B0000;
+}
+
+.cart-catalog button {
+  color: #fff;
+  background-color: #8B0000;
+  border-radius: 5px;
+  float: right;
+  margin: 5px;
+}
+
+#total-price {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#buy-btn {
+  padding: 10px 20px 10px 20px;
+  color: #fff;
+  background-color: #8B0000;
+  border-radius: 5px;
+}
+
+#open-login-btn {
+  border: none;
+  background-color: #fff;
+}
+
+#open-login-btn img {
+  vertical-align: middle;
+  width: 30px;
+}
+
+#register-modal-container {
+  display: none;
+  width: 100%;
+}
+
+.register-modal{
+  display: flex;
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#register-form {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: auto;
+}
+
+#register-form h2{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #8B0000;
+}
+
+#close-form-span {
+  cursor: pointer;
+  float: right;
+}
+
+.form-control{
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.form-control label{
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  padding: 10px;
+  padding-right: 40px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+}
+
+.signup-btn, .login-btn {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+  align-items: center;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #000000;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-btn:hover, .login-btn:hover{
+  background-color: #8B0000;
+}
+
+.form-control .icon{
+  position: absolute;
+  right: 10px;
+  top: 71%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: transparent;
+  pointer-events: none;
+}
+
+.form-control.success input {
+  border-color: #09371c;
+}
+
+.form-control.success .icon{
+  color: #09371c;
+}
+
+.form-control.error input {
+  border-color: #8B0000;
+}
+
+.form-control.error .icon,
+.form-control.error input::placeholder {
+  color: #8B0000;
+}
+
+.modal-reg{
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-reg{
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  border: 1px solid #888;
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal-content-reg h2 {
+  color: #8B0000;
+}
+
+.close-button-reg{
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.close-button-reg:hover,
+.close-button-reg:focus{
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 input[type="checkbox"] {
     visibility: hidden;
@@ -202,10 +414,11 @@ input[type="checkbox"] {
     transform: rotate(-45deg);
     transition: bottom .3s, transform .3s .10s;
   }
+
   .nav-links {
     top: 0;
     left: 0;
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     gap: 13px;
@@ -218,6 +431,7 @@ input[type="checkbox"] {
     width: 50%;
     height: 100%;
   }
+
   .page-link {
     display: block;
     padding: 8px;
@@ -225,6 +439,7 @@ input[type="checkbox"] {
     font-size: 18px;
     text-align: center;
     text-decoration: none;
+    height: 100%;
   }
   .page-link:hover {
     background: rgba(255,255,255,.2)
@@ -232,6 +447,7 @@ input[type="checkbox"] {
   .burger-checkbox:checked ~ .nav-links {
     transform: translateX(0);
   }
+
 }
 
   @media all and (min-width: 180px) and (max-width: 768px) {
