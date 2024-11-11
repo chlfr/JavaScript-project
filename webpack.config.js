@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: ['./src/catalog.js', './src/registration.js', './src/carousel.js', './src/quotes.js', './src/apiNews.js'], // пути к js файлам
+  entry: ['./public/catalog.js', './public/registration.js'], // пути к js файлам
   output: {
     filename: 'main.js', // имя выходного файла
     path: path.resolve(__dirname, 'dist'), // директория для выходного файла
