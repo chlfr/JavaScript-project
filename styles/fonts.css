@@ -1,25 +1,5 @@
-@font-face {
-    font-family: 'Merriweather';
-    font-weight: regular;
-    src: url('../assets/fonts/Merriweather-Regular.eot'),
-         url('../assets/fonts/Merriweather-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Merriweather';
-    font-weight: bold;
-    src: url('../assets/fonts/Merriweather-Bold.eot'),
-         url('../assets/fonts/Merriweather-Bold.ttf') format('truetype'),
-         url('../assets/fonts/Merriweather-Bold.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Merriweather';
-    font-style: italic;
-    src: url('../assets/fonts/Merriweather-Italic.ttf') format('truetype'),
-         url('../assets/fonts/Merriweather-Italic.woff') format('woff');
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 html {
-    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
