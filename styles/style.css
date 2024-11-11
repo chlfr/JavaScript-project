@@ -1,166 +1,166 @@
 /* home */
 
 #main-cover {
-    background-image: url("../assets/img/old-books.jpg") ;
-    background-repeat: no-repeat; 
-    background-size: cover;
-    width: 100%;
-    height: 550px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+  background-image: url("../assets/img/old-books.jpg") ;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  width: 100%;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #main-cover h2 {
-    color: #8B0000;
-    font-size: 72px;
-    margin-bottom: 20px;
-    text-shadow: 5px 5px 6px rgb(255, 255, 255);
-    text-transform: uppercase;
-    text-align: center;
+  color: #8B0000;
+  font-size: 72px;
+  margin-bottom: 20px;
+  text-shadow: 5px 5px 6px rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-align: center;
 }
 
 #main-cover .find_margin {
-    width: 100%;
-    height: auto;
-    text-align: center;
-    padding-bottom: 3em;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding-bottom: 3em;
 }
 
 #main-cover .find_margin input[type="text"] {
-    padding: 8px;
-    width: 40%;
+  padding: 8px;
+  width: 40%;
 }
 
 #main-cover .find_margin input[type="submit"] {
-    margin-left: 24px;
-    padding: 10px;
-    color: white;
-    background-color: #8B0000;
-    font-size: 16px;
-    font-weight: bolder;
-    border-radius: 10px;
-    transition: transform 0.5s;
+  margin-left: 24px;
+  padding: 10px;
+  color: white;
+  background-color: #8B0000;
+  font-size: 16px;
+  font-weight: bolder;
+  border-radius: 10px;
+  transition: transform 0.5s;
 }
 
 #main-cover .find_margin input[type="submit"]:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 #slider-new {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
 }
 
 #slider-new h2 {
-    font-weight: 800;
-    color: #8B0000;
-    padding-bottom: 20px;
+  font-weight: 800;
+  color: #8B0000;
+  padding-bottom: 20px;
 }
 
 .slider-container{
-    background: #fff;
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 80vw;
-    max-width: 720px;
-    height: 330px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 80vw;
+  max-width: 720px;
+  height: 330px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .slider-container .slider{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    width: 86%;
-    margin: auto;
-    transition: opacity 0.3s ease-in-out;
-    opacity: 1;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 86%;
+  margin: auto;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
 }
 
 .slider-container .slider p{
-    color: #888;
-    text-align: justify;
-    font-size: 15px;
+  color: #888;
+  text-align: justify;
+  font-size: 15px;
 }
 
 .slider-container .slider img{
-    width: 150px;
-    height: 231px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
+  width: 150px;
+  height: 231px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .slider-container .slider h3{
-    color: #333;
-    font-size: 15px;
-    margin-bottom: 2px;
-    text-align: center;
+  color: #333;
+  font-size: 15px;
+  margin-bottom: 2px;
+  text-align: center;
 }
 
 .slider-container .slider h6{
-    color: #777;
-    font-weight: 500;
-    text-align: center;
-    font-size: 12px;
+  color: #777;
+  font-weight: 500;
+  text-align: center;
+  font-size: 12px;
 }
 
 .slider-container button{
-    font-size: 28px;
-    height: 48px;
-    width: 48px;
-    background: #fff;
-    border: none;
-    position: absolute;
-    color: #8B0000;
-    cursor: pointer;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(78, 17, 17, 0.814);
+  font-size: 28px;
+  height: 48px;
+  width: 48px;
+  background: #fff;
+  border: none;
+  position: absolute;
+  color: #8B0000;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(78, 17, 17, 0.814);
 }
 
 .slider-container button#next {
-    right: -26px;
+  right: -26px;
 }
 
 .slider-container button#prev {
-    left: -26px;
+  left: -26px;
 }
 
 .swiper {
-    height: 100vh;
-    width: 100%;
+  height: 100vh;
+  width: 100%;
 }
 
 .wrapper, .slide {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-  
+
 .slide {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .slide::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 10;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
 }
 
 .slide .image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .slide .image-data {
@@ -239,82 +239,82 @@ a.button:hover {
 }
 
 #partners-block {
-    width: 100%;
-    height: auto;
-    padding-top: 4em;
+  width: 100%;
+  height: auto;
+  padding-top: 4em;
 }
 
 .partners-article {
-    margin-bottom: 4em;
+  margin-bottom: 4em;
 }
 
 .partners-title {
-    font-size: 3em;
-    margin-bottom: 0.5em;
-    text-align: center;
-    text-shadow: 2px 2px 3px gray;
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  text-shadow: 2px 2px 3px gray;
 }
 .partners-span {
-    color: #8B0000;
+  color: #8B0000;
 }
 
 .partners-text {
-    font-size: 1.2em;
-    margin-bottom: 3em;
-    text-align: center;
-    width: 100%;
+  font-size: 1.2em;
+  margin-bottom: 3em;
+  text-align: center;
+  width: 100%;
 }
 
 .partners-icon {
-    text-align: center;
-    margin-bottom: 4em;
+  text-align: center;
+  margin-bottom: 4em;
 }
 
 .partners-icon img { 
-    width: 15em;
+  width: 15em;
 }
 
 /* about */
 
 .about-container {
-    background-image: url(../assets/img/paper.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 300px;
+  background-image: url(../assets/img/paper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
 }
 
 .about-container h1, .about-container h3 {
-    display: flex;
-    justify-content: right;
-    padding-top: 50px;
-    padding-right: 10%;
+  display: flex;
+  justify-content: right;
+  padding-top: 50px;
+  padding-right: 10%;
 }
 
 .about-container h1 {
-    color: rgb(255, 255, 255);
-    font-style: italic;
-    font-weight: bolder;
-    font-size: 40px;
-    text-shadow: 3px 3px 4px #8B0000;
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 40px;
+  text-shadow: 3px 3px 4px #8B0000;
 }
 
 .about-container h3 {
-    color: #ffffff;
-    text-shadow: 3px 3px 4px #8B0000;
+  color: #ffffff;
+  text-shadow: 3px 3px 4px #8B0000;
 }
 
 .history-block h1 {
-    color: rgb(0, 0, 0);
-    font-weight: bolder;
-    font-size: 30px;
-    text-align: center;
-    padding-top: 30px;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 30px;
 }
 
 .history-block p {
-    padding: 30px;
-    text-align: justify;
-    font-size: 24px;
+  padding: 30px;
+  text-align: justify;
+  font-size: 24px;
 }
 .location-container {
   height: auto;
@@ -389,13 +389,13 @@ a.button:hover {
 }
 
 #news-container h1 {
-    text-transform: uppercase;
-    color: #8B0000;
-    text-shadow: 3px 3px 4px #4646464f;
-    text-align: center;
-    margin-bottom: 20px;
-    background-image: url(../assets/img/paper_fon.jpg);
-    padding: 10px;
+  text-transform: uppercase;
+  color: #8B0000;
+  text-shadow: 3px 3px 4px #4646464f;
+  text-align: center;
+  margin-bottom: 20px;
+  background-image: url(../assets/img/paper_fon.jpg);
+  padding: 10px;
 }
 .news-block {
   display: flex;
@@ -415,22 +415,22 @@ a.button:hover {
 }
 
 .animation-span {
-    animation: animation-span 2s infinite;
+  animation: animation-span 2s infinite;
 }
 
 .news-text-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    border-top: 1px solid #8B0000;
-    margin: 0 30px 0 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  border-top: 1px solid #8B0000;
+  margin: 0 30px 0 30px;
 }
 
 .text-column {
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: center;
-    margin-top: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .text-column h2 {
@@ -721,10 +721,6 @@ input[type="text"]{
   margin-bottom: 20px;
 }
 
-
-
-
-
 @media all and (max-width: 1180px) {
   .news-text-container {display: block; margin: 0; padding: 30px;}
 }
@@ -751,8 +747,4 @@ input[type="text"]{
     .slider-container .slider p{
         font-size: 13px;
     }
-}
-
-@media all and (min-width: 280px) and (max-width: 768px) {
-
 }
