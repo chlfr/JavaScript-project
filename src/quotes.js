@@ -1,4 +1,4 @@
-    const quotes = [
+ const quotes = [
         "It is only with the heart that one can see rightly; what is essential is invisible to the eye. — Antoine de Saint-Exupéry 'The Little Prince'",
         "All animals are equal, but some animals are more equal than others. — George Orwell 'Animal Farm'",
         "It does not do to dwell on dreams and forget to live. — J.K. Rowling 'Harry Potter and the Sorcerer's Stone'",
@@ -50,4 +50,3 @@
     // показываем цитату при загрузке страницы
     displayQuote();
 
-    

@@ -29,7 +29,7 @@ let currentPage = 1;
 const itemsPerPage = 6;
 
 // ссылки на элементы
-const catalog = document.getElementById('books-list');
+const productList = document.getElementById('books-list');
 const cartModal = document.getElementById('cart-modal-container');
 const closeModal = document.getElementById('close-modal-span');
 const openCart = document.getElementById('open-cart-btn');
